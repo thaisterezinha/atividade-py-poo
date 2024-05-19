@@ -1,0 +1,34 @@
+class Pessoa:
+    def __init__(self,nome,peso,idade,comendo=False):
+        self.nome=nome
+        self.peso=peso
+        self.idade=idade
+
+        self.estado="parado"
+
+    def parar(self):
+        self.estado="parado"
+    def comer(self,alimento):
+        if self.estado=="parado":
+            self.estado="comendo"
+            print(f"{self.nome}esta comendo{alimento}")
+        elif self.estado=="comendo":
+            print(f"{self.nome} já esta comendo")
+        else:
+            print(f"{self.nome} nao pode comer")
+    def andar(self):
+        if self.estado=="parado":
+            self.estado="andando"
+            print(f"{self.nome} esta andando")
+        elif self.estado=="andando":
+            print(f"{self.nome} esta andando")
+        else:
+            print(f"{self.nome}nao pode agora")
+    def falar(self):
+        if self.estado=="parado":
+            self.estado="falando"
+            print(f"{self.nome} esta falando")
+        elif self.estado=="falando":
+            print(self.nome,"já esta falando")
+        else:
+            print(f"{self.nome}nao pode falar agora")
